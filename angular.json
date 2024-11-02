@@ -28,6 +28,7 @@
                             "src/manifest.json"
                         ],
                         "styles": [
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/custom-theme.scss",
                             "src/styles/main.scss"
                         ],
@@ -87,7 +88,7 @@
                             }
                         ],
                         "styles": [
-                            "src/styles.css"
+                            "src/styles.scss"
                         ],
                         "scripts": []
                     }

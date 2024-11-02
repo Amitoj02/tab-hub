@@ -1,6 +1,7 @@
 @import '../styles/main';
 
-.main {
-    background-color: $primary-bg-color;
-    height: 100%;
+.review-request {
+    flex: 0 0 200px;
+    min-width: 200px;
+    margin: 10px 10px 10px 0;
 }

@@ -7,8 +7,41 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<main class="main">
-    <h1>Hello world</h1>
+<main class="main p-4">
+    <nav class="row align-items-center">
+        <div class="col">
+            <small>Last synced: 5 minutes ago</small>
+        </div>
+        <div class="col text-center">
+            <h4>Dashboard</h4>
+        </div>
+        <div class="col text-end">
+            <button mat-icon-button class="p-1">
+                <mat-icon>notifications</mat-icon>
+            </button>
+            <button mat-icon-button  class="p-1">
+                <mat-icon>settings</mat-icon>
+            </button>
+        </div>
+    </nav>
+    <section *ngIf="reviewRequests">
+        <h5 class="mt-4">Review Requests</h5>
+        <div class="scrollable-row">
+            @for(request of reviewRequests; track request.id){
+                <div class="review-request card">
+                    <div class="p-3 d-flex">
+                        <mat-icon class="me-2">account_circle</mat-icon>
+                        <a [href]="request.repository.url">{{request.repository.name}}</a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Request 1</h6>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
