@@ -3,14 +3,14 @@ import {RouterOutlet} from '@angular/router';
 import {MatIcon, MatIconRegistry} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {PullRequest} from './interfaces/github';
-import {NgIf, NgOptimizedImage, NgStyle} from '@angular/common';
+import {NgIf} from '@angular/common';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatDialog} from '@angular/material/dialog';
 import {SettingsComponent} from './dialogs/settings/settings.component';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, MatIcon, MatButtonModule, NgIf, NgOptimizedImage, NgStyle],
+    imports: [RouterOutlet, MatIcon, MatButtonModule, NgIf],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
