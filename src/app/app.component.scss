@@ -1,7 +1,13 @@
 @import '../styles/main';
 
 .review-request {
-    flex: 0 0 200px;
+    flex: 0 0 300px;
+    min-width: 200px;
+    margin: 10px 10px 10px 0;
+}
+
+.repository {
+    flex: 0 0 300px;
     min-width: 200px;
     margin: 10px 10px 10px 0;
 }

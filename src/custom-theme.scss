@@ -8,10 +8,10 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the theme object.
+// Default the theme object.
 $tab-hub-theme: mat.define-theme((
     color: (
-        theme-type: light,
+        theme-type: dark,
         primary: mat.$azure-palette,
         tertiary: mat.$blue-palette,
     ),
@@ -19,6 +19,7 @@ $tab-hub-theme: mat.define-theme((
         scale: 0,
     )
 ));
+
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

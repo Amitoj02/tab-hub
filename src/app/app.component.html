@@ -19,7 +19,7 @@
             <button mat-icon-button class="p-1">
                 <mat-icon>notifications</mat-icon>
             </button>
-            <button mat-icon-button  class="p-1">
+            <button mat-icon-button (click)="openSettings()" class="p-1">
                 <mat-icon>settings</mat-icon>
             </button>
         </div>
@@ -28,17 +28,53 @@
         <h5 class="mt-4">Review Requests</h5>
         <div class="scrollable-row">
             @for(request of reviewRequests; track request.id){
-                <div class="review-request card">
-                    <div class="p-3 d-flex">
-                        <mat-icon class="me-2">account_circle</mat-icon>
+                <div class="review-request card p-3">
+                    <div class="d-flex">
+                        <mat-icon class="me-2 ic-primary" svgIcon="pr_open"></mat-icon>
                         <a [href]="request.repository.url">{{request.repository.name}}</a>
                     </div>
-                    <div class="card-body">
-                        <h6 class="card-title">Request 1</h6>
+                    <div class="d-flex flex-column">
+                        <h6 class="card-title my-2">
+                            <a href="#">feat: Add more functionalities to this feature so that it looks more nice</a>
+                            <small class="txt-secondary fw-normal">#256</small>
+                        </h6>
+                        <small class="txt-secondary txt-x-small ms-auto">5 hours ago</small>
                     </div>
                 </div>
             }
         </div>
+
+        <h5 class="mt-4">Repositories</h5>
+        <div class="scrollable-row">
+            @for(request of reviewRequests; track request.id){
+                <div class="repository card p-3">
+                    <div class="d-flex flex-column">
+                        <h6 class="m-0"><a [href]="request.repository.url">{{request.repository.name}}</a></h6>
+                        <hr class="my-2">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <p class="txt-small">Issues</p>
+
+                        <div class="d-flex flex-column">
+                            @for(request of reviewRequests;track request.id){
+                                @if(request.id % 2 == 0){
+                                    <article class="d-flex my-1">
+                                        <mat-icon class="txt-secondary fs-5">radio_button_checked</mat-icon>
+                                        <small class="mx-1">
+                                            <a href="#">feat: Add more functiofeature so that it looks more nice</a>
+                                        </small>
+                                        <small class="txt-secondary fw-normal">#256</small>
+                                    </article>
+                                }
+                            }
+                        </div>
+
+                        <small class="txt-secondary txt-x-small ms-auto">5 hours ago</small>
+                    </div>
+                </div>
+            }
+        </div>
+
     </section>
 
 

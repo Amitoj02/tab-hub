@@ -50,6 +50,22 @@ a {
     overflow-x: auto;
 }
 
+.txt-secondary {
+    color: $secondary-text-color;
+}
+
+.txt-x-small {
+    font-size: $xsmall;
+}
+
+.txt-small {
+    font-size: $small;
+}
+
+mat-icon {
+    overflow: visible !important;
+}
+
 // Scrollbar
 ::-webkit-scrollbar {
     height: 10px;
