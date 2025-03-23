@@ -10,7 +10,6 @@ import {SettingsComponent} from './dialogs/settings/settings.component';
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     imports: [RouterOutlet, MatIcon, MatButtonModule, NgIf, NgOptimizedImage, NgStyle],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
