@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {token} from '../../secret';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
@@ -7,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ApiService {
 
-    private accessToken: string = token;
+    private accessToken: string = '';
     private baseUrl: string = 'https://api.github.com';
 
     constructor(

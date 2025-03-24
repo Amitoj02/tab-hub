@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-html,body {
+html, body {
     height: 100%;
     background-color: $primary-bg-color;
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -10,9 +10,15 @@ html,body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 0;
+    @extend .unselectable;
 }
 
-a {
+span {
+    @extend .unselectable;
+}
+
+
+.animated-link{
     position: relative;
     color: $primary-text-color;
     text-decoration: none;
@@ -30,13 +36,23 @@ a {
         transform: scaleX(0);
         transition: transform $transition-speed ease;
     }
+
     &:hover {
         opacity: 0.8;
         text-decoration-color: RGBA(255, 255, 255, 1);
+
         &:before {
             transform: scaleX(1);
         }
     }
+}
+
+.unselectable {
+    user-select: none;
+}
+
+.selectable {
+    user-select: text;
 }
 
 .card {
@@ -66,16 +82,27 @@ mat-icon {
     overflow: visible !important;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 // Scrollbar
 ::-webkit-scrollbar {
     height: 10px;
     width: 10px;
 }
+
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
+    border-radius: $border-radius;
     background-color: $dark-grey;
 }
+
 ::-webkit-scrollbar-thumb {
     background: black;
-    border-radius: 10px;
+    border-radius: $border-radius;
+}
+
+//dialog
+.settings-dialog-panel {
+    max-width: 100% !important;
 }

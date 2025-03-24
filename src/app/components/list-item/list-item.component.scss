@@ -1,0 +1,12 @@
+@use '../../../styles/variables' as *;
+
+.list-item-container{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: $border-radius;
+    &.selected {
+        background-color: #2d2c2c;
+    }
+}

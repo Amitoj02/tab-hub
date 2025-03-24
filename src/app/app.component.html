@@ -31,11 +31,11 @@
                 <div class="review-request card p-3">
                     <div class="d-flex">
                         <mat-icon class="me-2 ic-primary" svgIcon="pr_open"></mat-icon>
-                        <a [href]="request.repository.url">{{request.repository.name}}</a>
+                        <a class="animated-link" [href]="request.repository.url">{{request.repository.name}}</a>
                     </div>
                     <div class="d-flex flex-column">
                         <h6 class="card-title my-2">
-                            <a href="#">feat: Add more functionalities to this feature so that it looks more nice</a>
+                            <a class="animated-link" href="#">feat: Add more functionalities to this feature so that it looks more nice</a>
                             <small class="txt-secondary fw-normal">#256</small>
                         </h6>
                         <small class="txt-secondary txt-x-small ms-auto">5 hours ago</small>
@@ -49,7 +49,7 @@
             @for(request of reviewRequests; track request.id){
                 <div class="repository card p-3">
                     <div class="d-flex flex-column">
-                        <h6 class="m-0"><a [href]="request.repository.url">{{request.repository.name}}</a></h6>
+                        <h6 class="m-0"><a class="animated-link" [href]="request.repository.url">{{request.repository.name}}</a></h6>
                         <hr class="my-2">
                     </div>
                     <div class="d-flex flex-column">
@@ -61,7 +61,7 @@
                                     <article class="d-flex my-1">
                                         <mat-icon class="txt-secondary fs-5">radio_button_checked</mat-icon>
                                         <small class="mx-1">
-                                            <a href="#">feat: Add more functiofeature so that it looks more nice</a>
+                                            <a class="animated-link" href="#">feat: Add more functiofeature so that it looks more nice</a>
                                         </small>
                                         <small class="txt-secondary fw-normal">#256</small>
                                     </article>

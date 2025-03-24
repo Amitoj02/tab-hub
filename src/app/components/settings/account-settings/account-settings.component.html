@@ -1,0 +1,34 @@
+<article>
+
+    <div>
+        <h6>Add new account</h6>
+        <small>Your Github personnel access token is required (recommended to use <a [attr.href]="FineGrainedAccessTokenLink" target="_blank">fine-grained token</a> with read-only access to repositories, issues & pull requests)</small>
+
+        <div class="d-flex flex-column mt-3">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Nickname</mat-label>
+                <input matInput type="text" [(ngModel)]="newForm.nickname" required>
+                @if (newForm.nickname) {
+                    <button matSuffix mat-icon-button aria-label="Clear" (click)="newForm.nickname=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Token</mat-label>
+                <input matInput type="text" [(ngModel)]="newForm.token" autocomplete="off" required>
+                @if (newForm.token) {
+                    <button matSuffix mat-icon-button aria-label="Clear" (click)="newForm.token=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                }
+            </mat-form-field>
+        </div>
+    </div>
+    <button mat-raised-button>
+        <mat-icon>add</mat-icon>
+        <span>Save</span>
+    </button>
+</article>

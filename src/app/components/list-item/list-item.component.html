@@ -1,0 +1,11 @@
+<div
+    matRipple
+    class="d-flex list-item-container"
+    [ngClass]="{
+        'selected': selected,
+    }">
+    @if (icon) {
+        <mat-icon class="me-2">{{ icon }}</mat-icon>
+    }
+    <span>{{ title }}</span>
+</div>

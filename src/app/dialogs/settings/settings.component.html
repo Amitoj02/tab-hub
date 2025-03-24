@@ -1,7 +1,55 @@
 <section>
     <h5 mat-dialog-title>Configurations</h5>
     <mat-dialog-content>
-        <p>test</p>
+        <section class="row ">
+
+            <!-- Settings Menu -->
+
+            <article class="col-3">
+                @for (item of settingMenuItems; track item) {
+                    <list-item
+                        [icon]="item.icon"
+                        [title]="item.name"
+                        [selected]="item.name == currentPage.name"
+                        (click)="currentPage = item">
+                    </list-item>
+                }
+            </article>
+
+            <!-- Settings Content -->
+            <article class="col-9">
+
+                <div class="card p-3">
+                    <header class="d-flex">
+                        <h3>
+                            <span class="material-symbols-outlined me-2">{{ currentPage.icon }}</span>
+                            <span>{{ currentPage.name }}</span>
+                        </h3>
+                    </header>
+
+                    <hr>
+
+                    <section class="p-2">
+                        @switch (currentPage.name) {
+                            @case (settingMenuItems[0].name) {
+                                <account-settings></account-settings>
+                            }
+                            @case (settingMenuItems[1].name) {
+                                <repository-settings></repository-settings>
+                            }
+                            @case (settingMenuItems[2].name) {
+                                <appearance-settings></appearance-settings>
+                            }
+                            @case (settingMenuItems[3].name) {
+                                <about></about>
+                            }
+                        }
+                    </section>
+
+
+                </div>
+            </article>
+        </section>
     </mat-dialog-content>
     <mat-dialog-actions align="end">
         <button mat-button mat-dialog-close>Done</button>

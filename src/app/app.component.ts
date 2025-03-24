@@ -39,6 +39,7 @@ export class AppComponent {
                 }
             });
         }
+
     }
 
     registerMatIcons() {
@@ -51,7 +52,9 @@ export class AppComponent {
 
     openSettings(){
         this.dialog.open(SettingsComponent, {
-            width: '50%',
+            width: '70%',
+            height: '90%',
+            panelClass: 'settings-dialog-panel'
         });
     }
 }
